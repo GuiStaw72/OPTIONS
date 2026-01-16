@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Suppose que tu as déjà copié les fonctions Black-Scholes dans black_scholes.py
-from black_scholes import bs_price
+from Calc_GreeksPrIV import bs_price
 
 # Charger les données
 df = pd.read_csv("options_100_us.csv")
@@ -26,4 +26,3 @@ df["diff"] = df["bs_price"] - df["market_price"]
 
 # Afficher les 10 plus gros écarts
 print(df.sort_values("diff", key=abs, ascending=False).head(10))
-``
